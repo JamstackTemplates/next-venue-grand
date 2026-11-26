@@ -17,14 +17,16 @@ The `.claude/skills/` folder holds `write-plan` (drafts `plan/PLAN.md`) and `cle
 
 ## Structure and content
 
-`content/business.ts` holds the starter's shared business details and sample copy. When building a
-site, write page-specific copy directly in the route's `app/**/page.tsx` as JSX children of named React
-components. Put headings, calls to action, labels and captions in page order. Backing components
-own the semantic markup, Tailwind styles, accessibility and behavior. Keep typed data in `content/`
-for values the site reads programmatically, including contact details and structured collections.
-Document fields and validate IDs, required
-fields, prices, availability and references with item-specific failures. Rename in content and
-site.config.json. Keep the provisioner's config shape: name, description, domain, optional timeZone,
+`content/business.ts` holds Rosewood Hall's shared venue details, office hours and enquiry copy.
+Structured collections live in `content/spaces.ts` (rooms & capacities), `content/packages.ts`
+(priced event packages & availability) and `content/gallery.ts` (12 illustrated vignettes).
+Page-specific copy lives directly in each route's `app/**/page.tsx` (`app/page.tsx`,
+`app/spaces/page.tsx`, `app/packages/page.tsx`, `app/gallery/page.tsx`, `app/contact/page.tsx`,
+`app/not-found.tsx`) as JSX children of named React components. Backing components in `components/`
+and bespoke SVG art in `components/art/` own the semantic markup, Tailwind styles, accessibility and
+behavior. Document fields and validate IDs, required fields, prices, availability and references
+with item-specific failures in `tests/content.test.ts`. Rename in content and `site.config.json`.
+Keep the provisioner's config shape: name, description, domain, optional timeZone,
 jamstacks.siteId/cdnUrl and optional provisioningId. Business data never goes there. Reuse the design's
 illustrations and palette rather than adding unrelated assets.
 
@@ -72,3 +74,13 @@ and Pages never import/read it. Keep site.config.json, the form and workflow out
 light/dark captures after a fresh normal build and run node --test jamstacks/config.test.mjs separately.
 Each new template needs its own business-led layout/fonts/art and OG image; do not ship the neutral
 starter as a final design. Remove `plan/` and `.claude/skills/` before publishing a gallery template once reviewed.
+
+<!-- BEGIN:nextjs-agent-rules -->
+
+## This is NOT the Next.js you know
+
+This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
+
+This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
+
+<!-- END:nextjs-agent-rules -->

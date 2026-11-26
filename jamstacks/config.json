@@ -1,0 +1,19 @@
+{
+  "name": "Grand event venue",
+  "description": "A gilded Beaux-Arts ballroom venue with editable spaces and capacities, an interactive floor plan, priced event packages, an illustrated gallery, viewing hours and a Jamstacks contact component for date and package enquiries.",
+  "tech": "next",
+  "type": "venue",
+  "style": "grand",
+  "internal": false,
+  "components": [
+    "support-form"
+  ],
+  "configFile": "site.config.json",
+  "screenshots": {
+    "light": "jamstacks/home-light.jpg",
+    "dark": "jamstacks/home-dark.jpg",
+    "theme": {
+      "strategy": "media"
+    }
+  }
+}

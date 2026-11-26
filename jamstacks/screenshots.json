@@ -1,0 +1,22 @@
+{
+  "templateId": "next-venue-grand",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "fullPage": false,
+  "captures": [
+    {
+      "mode": "light",
+      "sha256": "467c3a3eef4cfca2eaa584baa89ff35af773779893c49025b588395f2e2fd3c2",
+      "file": "jamstacks/home-light.jpg",
+      "bytes": 237043
+    },
+    {
+      "mode": "dark",
+      "sha256": "086e4349b76c3c934933df30bc57cae7088077ff22c9dd319ecbe8947cfa7eb5",
+      "file": "jamstacks/home-dark.jpg",
+      "bytes": 230121
+    }
+  ]
+}
